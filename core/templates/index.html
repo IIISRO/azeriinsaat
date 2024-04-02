@@ -1,0 +1,393 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<!--Different css-->
+<link rel="stylesheet" href="{% static 'css/main-header.css' %}">
+<link rel="stylesheet" href="{% static 'css/home-navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/steps.css' %}">
+<link rel="stylesheet" href="{% static 'css/about-section1.css' %}">
+<link rel="stylesheet" href="{% static 'css/projects-section.css' %}">
+<link rel="stylesheet" href="{% static 'css/blogs.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact-section.css' %}">
+<link rel="stylesheet" href="{% static 'css/clients-section.css' %}">
+{% endblock %}
+{% block title%}
+<title>Azəri İnşaat TQŞ</title>
+{% endblock %}
+
+<!--Owl carousel-->
+
+
+
+{% block content%}
+
+
+
+
+<!--Main header for home page-->
+
+<section class="main-header-section" id="home">
+
+    {% include 'includes/home-navbar.html' %}
+
+
+    <!--Slider-->
+
+    <div class="slider_carousel owl-carousel owl-theme">
+
+        <div class="item">
+            <div class="grid-mask"></div>
+            <div class="slider-img">
+                <img src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/09/paral-08.jpg"
+                    alt="">
+            </div>
+            <div class="caption">
+                <h3 class="slider-title d-none d-lg-block mb-4">TİKİNTİ ŞİRKƏTİ</h1>
+                    <h2 class="slider-large-title text-uppercase  text-white">azərİ İnşaat TQŞ</p>
+                        <h3 class="slider-title d-none d-lg-block mt-4">gələcəyİNİZİ BİZİMLƏ qurun</h1>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="grid-mask"></div>
+            <div class="slider-img">
+                <img src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/09/paral-06.jpg"
+                    alt="">
+            </div>
+            <div class="caption">
+                <h3 class="slider-title d-none d-lg-block mb-4">TİKİNTİ ŞİRKƏTİ</h1>
+                    <h2 class="slider-large-title text-uppercase  text-white">azərİ İnşaat TQŞ</p>
+                        <h3 class="slider-title d-none d-lg-block mt-4">gələcəyİNİZİ BİZİMLƏ qurun</h1>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="steps w-100">
+    <div class="container-fluid">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-md-4  d-flex align-items-center justify-content-center">
+                <div class="step step1 d-flex align-items-center px-3 py-2 justify-content-center">
+                    <div class="step-overlay"></div>
+                    <div class="step-number">1.</div>
+                    <div class="step-content">
+                        <h3>Tikinti</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4  d-flex align-items-center justify-content-center">
+                <div class="step step2 d-flex align-items-center px-3 py-2 justify-content-center">
+                    <div class="step-overlay"></div>
+                    <div class="step-number">2.</div>
+                    <div class="step-content">
+                        <h3>Təmir</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4  d-flex align-items-center justify-content-center">
+                <div class="step step3 d-flex align-items-center px-3 py-2 justify-content-center">
+                    <div class="step-number">3.</div>
+                    <div class="step-content">
+                        <h3>Yenidənqurma</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--About section-->
+
+<div class="about-section py-5 mt-5">
+    <div class="container-fluid pb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-section-content d-flex flex-column align-items-center">
+                    <h6>haqqımızda</h6>
+                    <h2>Xidmətlərimizlə Keyfiyyət!</h2>
+                    <p class="text-center" style="font-size: 17px;">Sənətkarlığın innovasiya ilə qovuşduğu Azəri İnşaat
+                        TQŞ-ə xoş gəlmisiniz. Azəri İnşaat TQŞ yaşayış və qeyri-yaşayış binalarının,qurğuların,yolların
+                        tikintisi,təmir və abadlıq işləri və beton istehsalı ilə məşğuldur.Əsasən işğaldan azad olunmuş
+                        ərazilərdə fəaliyyət göstərir.</p>
+
+                </div>
+            </div>
+            <div class="col-md-6 about-images">
+                <img class="right-image"
+                    src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/10/slider-02.jpg"
+                    alt="">
+                <img src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/10/slider-01.jpg"
+                    alt="" class="left-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="projects-section pt-5 w-100">
+
+    <div class="pt-5" id="gallery">
+        <div class="container-fluid projects-header mx-auto d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-column align-items-start mb-5">
+                <span class="small-title mb-3">proyektlərİmİz</span>
+                <h2 class="projects-title">
+                    Layihələrimiz</h2>
+            </div>
+            <a href="{% url 'projects' %}" class="blogs-button py-3 px-4 text-uppercase">Bütün layİhələr</a>
+
+
+        </div>
+
+        <!-- <div class="button-group filters-button-group flex-wrap d-flex pt-10 pb-10">
+            <button class="filter-button mx-4 mb-4 button is-checked" data-filter=".main">Hamısı</button>
+            <button class="filter-button mx-4 mb-4 button" data-filter=".refrigerator">Elektrik xətlərinin çəkilməsi</button>
+            <button class="filter-button mx-4 mb-4 button" data-filter=".dishwasher">Küçə işıqlandırması</button>
+            <button class="filter-button mx-4 mb-4 button" data-filter=".cooktop">Təmir və yenidənqurma</button>
+
+        </div> -->
+        <section id="grid-container" class="mt-5 pt-3 grid filter-section"
+            style="background-color: transparent !important;">
+
+            {% for project in projects %}
+            <article class="filter-item ">
+                <div class="project-single d-flex">
+                    <a href="{% url 'projects' %}" class="project-img">
+                        <img src="{{project.cover_image.url}}" class="rounded-[5px] w-100" alt="">
+                    </a>
+                    <div class="project-category py-1 px-3">
+                        <a href="">layİhə</a>
+                    </div>
+                    <div class="project-read py-1 px-3">
+                        <a href="{% url 'project-detail' project.slug %}">Ətraflı</a>
+                    </div>
+
+
+                </div>
+
+            </article>
+
+            {% endfor%}
+
+        </section>
+
+
+    </div>
+</div>
+
+<!--Blogs-->
+<!-- <div class="blogs-section w-100 py-5 ">
+    <div class="container-fluid mt-4 projects-header mx-auto d-flex align-items-center justify-content-between">
+        <div class="d-flex flex-column  max-[768px]:mb-5  align-items-start">
+            <span class="blog-small-title mb-3">blog</span>
+            <h2 class="blogs-title">
+                Our News</h2>
+        </div>
+
+        <a href="" class="blogs-button py-3 px-4 text-uppercase">Check all posts</a>
+    </div>
+    <div class="container-fluid mt-5 blogs-grid">
+        <div class="blog-item">
+            <div class="blog-img-section">
+                <img class="blog-img"
+                    src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/09/post-01.jpg"
+                    alt="">
+
+                <div class="blog-overlay">
+                    <div class="blog-category py-1 px-3"><a href="">project</a></div>
+                </div>
+            </div>
+            <div class="blogs-content mt-3">
+                <h3 class="blog-title">
+                    <a href="">Project Planning</a>
+
+
+                </h3>
+                <div class="meta mt-3 d-flex align-items-center">
+                    <img class="meta-img"
+                        src="https://0.gravatar.com/avatar/0229d779828e62328bbdbe168118a84a?s=96&d=mm&r=g" alt="">
+                    <h6 class="meta-small-title">nicdark on Sep 19</h6>
+
+                </div>
+                <p class="mt-3 blog-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, voluptatum?
+                </p>
+                <a href="" class="blog-read-btn  px-4 mt-4 d-flex">read more</a>
+            </div>
+        </div>
+
+
+        <div class="blog-item">
+            <div class="blog-img-section">
+                <img class="blog-img"
+                    src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/09/post-01.jpg"
+                    alt="">
+
+                <div class="blog-overlay">
+                    <div class="blog-category py-1 px-3"><a href="">project</a></div>
+                </div>
+            </div>
+            <div class="blogs-content mt-3">
+                <h3 class="blog-title">
+                    <a href="">Project Planning</a>
+
+
+                </h3>
+                <div class="meta mt-3 d-flex align-items-center">
+                    <img class="meta-img"
+                        src="https://0.gravatar.com/avatar/0229d779828e62328bbdbe168118a84a?s=96&d=mm&r=g" alt="">
+                    <h6 class="meta-small-title">nicdark on Sep 19</h6>
+
+                </div>
+                <p class="mt-3 blog-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, voluptatum?
+                </p>
+                <a href="" class="blog-read-btn  px-4 mt-4 d-flex">read more</a>
+            </div>
+        </div>
+
+
+        <div class="blog-item">
+            <div class="blog-img-section">
+                <img class="blog-img"
+                    src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/09/post-01.jpg"
+                    alt="">
+
+                <div class="blog-overlay">
+                    <div class="blog-category py-1 px-3"><a href="">project</a></div>
+                </div>
+            </div>
+            <div class="blogs-content mt-3">
+                <h3 class="blog-title">
+                    <a href="">Project Planning</a>
+
+
+                </h3>
+                <div class="meta mt-3 d-flex align-items-center">
+                    <img class="meta-img"
+                        src="https://0.gravatar.com/avatar/0229d779828e62328bbdbe168118a84a?s=96&d=mm&r=g" alt="">
+                    <h6 class="meta-small-title">nicdark on Sep 19</h6>
+
+                </div>
+                <p class="mt-3 blog-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, voluptatum?
+                </p>
+                <a href="" class="blog-read-btn  px-4 mt-4 d-flex">read more</a>
+            </div>
+        </div>
+
+    </div>
+</div> -->
+
+
+<div class="contact-section w-100">
+    <div class="overlaay py-5"></div>
+    <div class="container-fluid contact-inner py-5">
+        <div class="row">
+            <div class="col-lg-6 contact-info">
+                <span class="contact-small-title mb-3">əlaqə</span>
+                <h2 class="contact-title">
+                    İşçilərimiz</h2>
+                <div class="team-list mt-5">
+
+                    <div class="team-member mb-4 d-flex align-items-center">
+                        <img class="team-img" src="{% static 'images/collective1.jpeg'%}" alt="">
+                        <div class="member-info">
+                            <h3>Sahə rəİsİ</h3>
+                            <p class="mt-2">Rizvan Qocayev</p>
+
+                        </div>
+                    </div>
+                    <div class="team-member mb-4 d-flex align-items-center">
+                        <img class="team-img" src="{% static 'images/collective1.jpeg'%}" alt="">
+                        <div class="member-info">
+                            <h3>Baş Mühəndİs</h3>
+                            <p class="mt-2">Elçin Əzizov</p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form action="" method="POST" class="w-100 home-contact-form d-flex flex-column align-items-center">
+                    {% csrf_token %}
+                    <h3>Bİzİmlə əlaqə saxlayın</h3>
+                    <p class="mt-3">Aşağıdakı formu dolduraraq bizə müraciətinizi bildirə bilərsiniz.</p>
+                    {{form.errors}}
+                    {{form.full_name}}
+                    {{form.email}}
+                    {{form.phone}}
+                    {{form.message}}
+                    <button type="submit" class="contact-submit-btn w-100 mt-4 py-3 ">sorğu göndər</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clients w-100 pb-5 pt-4">
+    <div class="container-fluid mt-4 projects-header mx-auto d-flex align-items-center justify-content-between">
+        <div class="d-flex flex-column  max-[768px]:mb-5  mb-3">
+            <span class="client-small-title mb-3">əməkdaşlıq</span>
+            <h2 class="clients-title">
+                Əməkdaşlıq etdiyimiz şirkətlər</h2>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div id="owl-demo3" class="owl-carousel owl-theme mt-4 mb-4">
+            <div class="client w-100">
+                <a href="https://bms.az" style=""><img class="client-img" src="https://bms.az/img/logo.png" alt=""
+                        style="object-fit: cover;"></a>
+
+            </div>
+            <div class="client w-100">
+                <a href="https://www.bakelektro.az" style=""><img class="client-img"
+                        src="https://www.bakelektro.az/wp-content/uploads/2022/10/bakelektro.png" alt=""
+                        style="object-fit: cover;"></a>
+
+            </div>
+            <div class="client w-100">
+                <a href="https://www.electroind.az" style=""><img class="client-img"
+                        src="https://www.electroind.az/wp-content/uploads/2022/10/electro-logo.png" alt=""
+                        style="object-fit: cover;"></a>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="banner w-100 py-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3 class="banner-text">Layihəniz üçün ilk addımı atın!</h3>
+            </div>
+            <div class="col-lg-4 banner-btn-section">
+                <a href="{% url 'contact'%}" class="banner-btn py-3 px-4">İndİ Müracİət Et</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
+
+
+
+{% block js%}
+
+<script src="{% static 'js/home.js'%}"></script>
+<script src="{% static 'js/projects.js'%}"></script>
+
+{% endblock%}

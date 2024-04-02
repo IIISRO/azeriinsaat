@@ -1,0 +1,74 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block css%}
+
+   
+    <link rel="stylesheet" href="{% static 'css/clients-section.css' %}">
+
+    {% endblock%}
+
+  
+{% block title%}
+
+<title>Əməkdaşlarımız</title>
+
+{% endblock %} 
+
+{% block content %}
+    <section class="clients-section w-100 py-5">
+        <div class="container-fluid mt-4 projects-header mx-auto d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-column  max-[768px]:mb-5  mb-3">
+                <span class="client-small-title mb-3">client</span>
+                <h2
+                    class="clients-title">
+                    Our Partners</h2>
+            </div>
+    
+        </div>
+        <div class="container-fluid mt-5">
+           
+            <div class="row w-100 d-flex">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="" class="client-item w-100">
+                        <img src="https://bms.az/img/logo.png" alt="" class="blogs-img ">
+                       
+                       
+                      
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="" class="client-item w-100">
+                        <img src="https://www.bakelektro.az/wp-content/uploads/2022/10/bakelektro.png" alt="" class="blogs-img ">
+                       
+                       
+                      
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="" class="client-item w-100">
+                        <img src="https://www.electroind.az/wp-content/uploads/2022/10/electro-logo.png" alt="" class="blogs-img ">
+                       
+                       
+                      
+                    </a>
+                </div>
+
+               
+
+                
+                
+
+
+
+            </div>
+            
+        </div>
+    </section>
+
+
+   
+{% endblock %}

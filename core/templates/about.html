@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css%}
+
+<link rel="stylesheet" href="{% static 'css/about-section1.css'%}" />
+
+{% endblock%}
+
+
+{% block title%}
+
+<title>Haqqımızda</title>
+
+{% endblock %}
+
+
+{% block content%}
+
+<div class="about-section py-5 mt-5">
+    <div class="container-fluid pb-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-section-content d-flex flex-column align-items-center">
+                    <h6>haqqımızda</h6>
+                    <h2>Xidmətlərimizlə Keyfiyyət!</h2>
+                    <p class="text-center" style="font-size: 17px;">Sənətkarlığın innovasiya ilə qovuşduğu Azəri İnşaat
+                        TQŞ-ə xoş gəlmisiniz. Azəri İnşaat TQŞ yaşayış və qeyri-yaşayış binalarının,qurğuların,yolların
+                        tikintisi,təmir və abadlıq işləri və beton istehsalı ilə məşğuldur. Əsasən işğaldan azad olunmuş
+                        ərazilərdə fəaliyyət göstərir.</p>
+                    
+                    <p>Ümumi tikinti vasitələri siyahımız:</p>
+                    <div class="tools w-100 d-flex align-items-center justify-content-between">
+                        <ul>
+                            <li>Kamaz - 10 ədəd</li>
+                            <li>Mixer - 8 ədəd</li>
+                            <li>Pompa - 2 ədəd</li>
+                            <li>Bekalator - 5 ədəd</li>
+                            <li>Howo - 4 ədəd</li>
+                        </ul>
+                        <ul>
+                            <li>Bobcat - 2 ədəd</li>
+                            <li>Yanacaq maşını - 1 ədəd</li>
+                            <li>Su maşını - 3 ədəd</li>
+                            <li>Pikap - 5 ədəd</li>
+                            <li>Qazel - 2 ədəd</li>
+                        </ul>
+                        <ul>
+                            <li>Atego - 2 ədəd</li>
+                            <li>Tır - 1 ədəd</li>
+                            <li>Beton zavodunun sayları - 4 ədəd</li>
+                            <li>Drabilka - 2 ədəd</li>
+                            <li>Kran - 1 ədəd</li>
+                        </ul>
+            
+                    </div>
+                 
+
+                </div>
+            </div>
+            <div class="col-lg-6 about-images">
+                <img class="right-image"
+                    src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/10/slider-02.jpg"
+                    alt="">
+                <img src="http://www.nicdarkthemes.com/themes/construction/wp/demo/construction/wp-content/uploads/sites/2/2019/10/slider-01.jpg"
+                    alt="" class="left-image">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <h2 class="success-header">Uğurlarımız</h2>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <a class="w-100 d-flex flex-column align-items-center fancy-box"
+                        href="{% static 'images/img1.jpg'%}" data-fancybox="group">
+                        <div class="">
+                            <img class="w-100 imgm" src="{% static 'images/img1.jpg'%}" />
+
+                        </div>
+
+
+
+
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+{% block js%}
+
+<!--Different js-->
+
+<script src="{% static 'js/about.js'%}"></script>
+<script src="{% static 'js/fancybox.js'%}"></script>
+
+{% endblock%}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block css%}
+
+   
+    <link rel="stylesheet" href="{% static 'css/projectss.css' %}">
+
+    {% endblock%}
+
+  
+{% block title%}
+
+<title>İşlərimiz</title>
+
+{% endblock %} 
+
+
+{% block content%}
+
+
+    <div
+    class="projects-section pt-5 w-full">
+
+    <div class="" id="gallery">
+        <div class="container-fluid projects-header mx-auto d-flex flex-column align-items-center justify-content-center">
+            <div class="d-flex flex-column  mb-5 w-100 align-items-center">
+                <span class="small-title mb-3">proyektlər</span>
+                <h2
+                    class="projects-title">
+                    Layihələrimiz</h2>
+            </div>
+    
+            <!-- <div class="button-group filters-button-group flex-wrap d-flex pt-10 pb-10">
+                <button class="filter-button mx-4 mb-4 button is-checked" data-filter=".main">Hamısı</button>
+                <button class="filter-button mx-4 mb-4 button" data-filter=".refrigerator">Elektrİk xətlərİnİn çəkİlməsİ</button>
+                <button class="filter-button mx-4 mb-4 button" data-filter=".dishwasher">Küçə İşıqlandırılması</button>
+                <button class="filter-button mx-4 mb-4 button" data-filter=".cooktop">Təmİr və abadlıq İşlərİ</button>
+               
+            </div> -->
+        </div>
+       
+
+        <section class="w-100 row"
+            style="background-color: transparent !important;">
+            {% for project in projects %}
+            
+               
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <a class="project-card"  href="{% url 'project-detail' project.slug %}" >
+                               <div class="button-read">Ətraflı <i class="fa fa-chevron-right"></i></div>
+                            <img height="300px" class="w-100" src="{{project.cover_image.url}}" alt="">
+                        </a>
+                    </div>
+            {% endfor%}
+
+           
+            
+
+
+          
+        </section>
+
+
+    </div>
+    </div>
+
+
+{% endblock%}
+
+    
+   {% block js%}
+
+    <script src="{% static 'js/projects.js'%}"></script>
+
+{% endblock %}

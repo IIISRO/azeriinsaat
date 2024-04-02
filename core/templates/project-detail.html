@@ -1,0 +1,55 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block css%}
+
+   
+    <link rel="stylesheet" href="{% static 'css/project-detail.css' %}">
+
+    {% endblock%}
+
+  
+{% block title%}
+
+<title>{{project.title}}</title>
+
+{% endblock %} 
+
+
+{% block content%}
+
+    <div class="project-detail-section w-100 py-5">
+        <div class="container-fluid">
+
+            <!--Project title-->
+
+            <div class="w-100">
+                <h2 style="text-transform: uppercase;">{{project.title}}</h2>
+            </div>
+            <div class="w-100 mt-5 row">
+                {% for i in img %}
+                <div class="col-12 col-sm-6 col-md-3 mb-4 project-card">
+                    <a  href="{{i.image.url}}" data-fancybox="group">
+                        <div class="button-read"><i class="fa fa-search-plus"></i></div>
+                        <img  class="w-100" src="{{i.image.url}}" alt="">
+                       
+                    </a>
+                   
+                </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+
+    </div>
+{% endblock%}
+{% block js%}
+    <script src="{% static 'js/fancybox.js'%}"></script>
+    {% endblock%}
+
+
+</body>
+
+</html>

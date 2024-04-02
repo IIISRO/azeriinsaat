@@ -1,0 +1,50 @@
+{% load static%}
+<nav class="navbar navbar-expand-lg py-3 navbar-light bg-white" id="navbar_top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo-black.png'%}" height="102" width="170" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon" id="toggler"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+                {% url 'home' as home %}
+                {% url 'about' as about %}
+                {% url 'services' as services %}
+                {% url 'blogs' as blogs %}
+                {% url 'projects' as projects %}
+                {% url 'contact' as contact %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == home %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Ana Səhİfə</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == about %}active{% endif %}" aria-current="page" href="{% url 'about' %}">Haqqımızda</a>
+                </li>
+              
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == services %}active{% endif %}" href="{% url 'services' %}">Xİdmətlərİmİz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == projects %}active{% endif %}" href="{% url 'projects' %}">İşlərİmİz</a>
+                </li>
+               
+     
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == contact %}active{% endif %}" href="{% url 'contact' %}">Əlaqə</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="tel:+1 (703) 992 6272"  class="px-4 py-3 btn-call-section text-uppercase text-white">
+                        <i class="fa fa-phone trin-trin"></i>
+                        <span class="text-white text-decoration-none">+1 (703) 992 6272</span>
+                    </a>
+                </li> -->
+              
+               
+            </ul>
+         
+
+        </div>
+
+    </div>
+
+</nav>

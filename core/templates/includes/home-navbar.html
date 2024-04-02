@@ -1,0 +1,52 @@
+{% load static %}
+  <!--Navbar-->
+
+  <nav class="navbar py-5 navbar-expand-lg navbar-dark fixed-top" id="navbar_top">
+    <div class="container-fluid d-flex ">
+        <a class="navbar-brand" id="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo-white.png'%}" id="logo"  alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon" id="toggler"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {% url 'home' as home %}
+                {% url 'about' as about %}
+                {% url 'services' as services %}
+                {% url 'blogs' as blogs %}
+                {% url 'projects' as projects %}
+                {% url 'contact' as contact %}
+                <li class="nav-item">
+                    <a class="nav-link  {% if request.path == home %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Ana Səhİfə</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  {% if request.path == about %}active{% endif %}" href="{% url 'about' %}">Haqqımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  {% if request.path == services %}active{% endif %}" href="{% url 'services' %}">Xİdmətlərİmİz</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link  {% if request.path == projects %}active{% endif %}" href="{% url 'projects' %}">İşlərİmİz</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link  {% if request.path == contact %}active{% endif %}" href="{% url 'contact' %}">Əlaqə</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <button class="px-4 py-2 quotation-btn text-uppercase text-white">Müraciət et</button>
+                </li> -->
+                <!-- <li class="nav-item chaticon">
+                        <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" type="button"><img src="{% static 'images/chaticon.png" alt=""></a>
+                    </li> -->
+
+
+            </ul>
+            <!-- <form class="d-flex">
+                    <button class="btn btn-quote mt-2  d-flex align-items-center"  role="button" type="button"><i class="mx-2  far fa-comment-dots first-comment-icon"></i> <span class="btn-txt">Get a quote</span> <i class="mx-2 far fa-comment-dots last-comment-icon"></i></button>
+                  </form> -->
+        </div>
+
+    </div>
+
+</nav>

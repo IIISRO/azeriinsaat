@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css%}
+
+
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+{% endblock%}
+
+
+{% block title%}
+
+<title>Əlaqə</title>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="contact-section" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+    <div class="container">
+
+        <div class="row pb-5">
+            <div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-6 col-xxl-6 contact-form-section pt-5 mt-5">
+                <div class="contact-form">
+
+                    <h3 class="mb-3 mt-3">BİZİMLƏ ƏLAQƏYƏ KEÇİN</h3>
+                    <p class="mb-4">
+                        “Yaxınlıqda tikinti xidməti” axtarırsınız? Bütün suallarınızı cavablandırmaq və
+                        tikinti ilə bağlı problemlərinizi həll etmək üçün hər zaman telefondayıq. Bizim texniki
+                        mütəxəssislər siz görüş təyin etdiyiniz kimi dərhal tikinti və təmir prosesinə başlamağa hazırdırlar.</p>
+                        
+                        <form action="" class="w-100" method="POST">
+                         {% csrf_token %}
+                         {{form.errors}}
+                        <label for="" class="mb-3">Adınız və Soyadınız</label>
+                         {{form.full_name}}
+                        <label for="" class="mb-3">Elektron poçt ünvanınız</label>
+                         {{form.email}}
+                         {{form.email.errors}}
+                        <label for="" class="mb-3">Telefon nömrəniz</label>
+                          {{form.phone}}
+                          {{form.phone.errors}}
+                        <label for="" class="mb-3">Mesajınız</label>
+                         {{form.message}}
+                        <button class="contact-btn px-4 py-3 mt-4">göndər</button>
+
+                    </form>
+                    
+               
+                </div>
+
+            </div>
+            <div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-6 col-xxl-6 contact-information pt-5 mt-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24311.039517282865!2d49.82548015646792!3d40.38935345951992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d8f5f2dbde1%3A0x7faa6a9169414e1f!2zxZ7JmWZhecmZdCBNZWhkaXlldiBLw7zDp8mZc2ksIEJha8SxLCBBesmZcmJheWNhbg!5e0!3m2!1saz!2spl!4v1711231495551!5m2!1saz!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="w-full row ">
+                    <div class="col-md-12 mb-4 d-flex flex-column contact-box">
+                        <p class="contact-info-header">Telefon</p>
+                        <a href="tel:(+994) 55 564 44 04" class="text-gray d-block mb-3">(+994) 55 564 44 04</a>
+                        <a href="tel:(+994) 50 564 44 04" class="text-gray">(+994) 50 564 44 04</a>
+                    </div>
+                    <div class="col-md-12 mb-4 d-flex flex-column contact-box">
+                        <p class="contact-info-header">Ünvan</p>
+                        <p>Bakı <br> Yasamal rayonu <br> Şəfayət Mehtiyev küçəsi <br> ev 163-175 mənzil 1A</p>
+                    </div>
+                    <!-- <div class="col-md-12 d-flex flex-column contact-box">
+                        <p class="contact-info-header">İş saatları</p>
+                        <p ><p class="d-flex align-items-center">bazar ertəsi:	<span class="mx-3 d-flex">09:00–18:00</span> </p> 
+                        <p class="d-flex align-items-center">çərşənbə axşamı:	<span class="mx-3 d-flex">09:00–18:00</span> </p> 
+                        <p class="d-flex align-items-center">çərşənbə:	<span class="mx-3 d-flex">09:00–18:00</span> </p> 
+                        <p class="d-flex align-items-center">cümə axşamı:	<span class="mx-3 d-flex">09:00–18:00</span> </p> 
+                        <p class="d-flex align-items-center">cümə:	<span class="mx-3 d-flex">09:00–18:00</span> </p> 
+                        <p class="d-flex align-items-center">şənbə:	<span class="mx-3 d-flex">09:00–18:00</span> </p> 
+                        <p class="d-flex align-items-center">bazar:	<span class="mx-3 d-flex">bağlıdır</span> </p> 
+                            </p>
+                    </div> -->
+                </div>
+                
+              
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
